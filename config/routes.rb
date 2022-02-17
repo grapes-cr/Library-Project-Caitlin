@@ -1,4 +1,14 @@
 LibraryProject::Application.routes.draw do
+  get "rents/rent_id"
+
+  get "books/books_id"
+
+  get "users/user_id"
+
+  get "users/user_id/rents"
+
+  get "users/user_id/permissions"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
