@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionController::TestCase
-  test "should get user_id" do
-    get :user_id
+  test "should get index" do
+    get :index
     assert_response :success
   end
 

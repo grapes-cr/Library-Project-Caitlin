@@ -1,13 +1,30 @@
 LibraryProject::Application.routes.draw do
-  get "rents/rent_id"
 
-  get "books/books_id"
+  resources :users do
+    resources :rents do 
+      member do
+        get :intake_record
+      end
+      collection do
+        get :disability_code
+      end
+    end
+    resources :permission
+    get "index"
 
-  get "users/user_id"
+  end
 
-  get "users/user_id/rents"
+  resources :books, only: [:edit] do
+    get :book_id
+    get "index"
 
-  get "users/user_id/permissions"
+  end
+
+  resources :rents do
+    get :rent_id
+    get "index"
+
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

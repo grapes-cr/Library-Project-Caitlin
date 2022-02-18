@@ -1,4 +1,4 @@
 class RentsController < ApplicationController
-  def rent_id
-  end
+  def index
+  end 
 end
